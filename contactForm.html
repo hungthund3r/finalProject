@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Forms</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="js/formScript.js">  </script>
+
+
+  </head>
+
+  <body id="contactFormBody">
+
+    <!-- Header + Horizontal bar
+    ===================================-->
+    <div id="divNavBar">
+      <a href="index.html" id="logoLink">
+        <img id ="logo" src="img/logo.png" alt="logo">
+        <h1 id="headerTitle">Alphalight</h1>
+      </a>
+
+      <ul id="navUl">
+        <li><a href="privacyPolicy.html">Privacy Policy</a></li>
+        <li><a href="termsOfUse.html">Terms of Use</a></li>
+      </ul>
+    </div>
+
+
+    <!-- Contact Form
+    ===================================-->
+    <h1 id="contacFormH1">Contact Form</h1>
+
+    <div id="formContact">
+      <form name="myFormContact" action="https://sheetdb.io/api/v1/tx3gl2bvxu3ze" onsubmit="return loginn()" method="POST">
+        <input type="text" id="contactName" class="contactFeedback-input" placeholder="Name" name="data[Name]" />
+        <input type="text" id="contactLastName" class="contactFeedback-input" placeholder="Last Name" name="data[Last Name]" />
+        <input type="email" id="email" class="contactFeedback-input" placeholder="email" name="data[Email]"/>
+        <input type="tel" id="phoneNumber" class="contactFeedback-input" placeholder="Phone Number" name="data[Phone Number]" />
+
+        <textarea class="contactFeedback-input" placeholder="Comment" name="data[Comment]"></textarea>
+        <input id="contactSubmit" type="Submit" value="SUBMIT"/>
+        <input id="contactReset" type="Reset" value="RESET"/>
+      </form>
+    </div>
+
+    <!-- Logout contact form
+    ===================================-->
+    <form id="lgtOutForm" onsubmit="return lgt()">
+      <h1 id="txtMsg"></h1>
+      <input type="submit" value="Return"/>
+    </form>  
+
+
+
+  </body>
+</html>

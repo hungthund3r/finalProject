@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Forms</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="js/formScript.js">  </script>
+
+  </head>
+
+  <body id="formBody">
+
+    <!-- Header + Horizontal bar
+    ===================================-->
+    <div id="divNavBar">
+      <a href="index.html" id="logoLink">
+        <img id ="logo" src="img/logo.png" alt="logo">
+        <h1 id="headerTitle">Alphalight</h1>
+      </a>
+
+      <ul id="navUl">
+        <li><a href="privacyPolicy.html">Privacy Policy</a></li>
+        <li><a href="termsOfUse.html">Terms of Use</a></li>
+      </ul>
+    </div>
+
+    <h1 id="formH1">Bank account details</h1>
+
+    <div id="form">
+      <form name="myForm" action="https://sheetdb.io/api/v1/tx3gl2bvxu3ze" onsubmit="return login()" method="post">
+        <input type="text" id="bankName" class="feedback-input" placeholder="Name of bank" name="data[Bank Name]" />
+        <input type="text" id="accName" class="feedback-input" placeholder="Account name" name="AccName" />
+        <input type="text" id="ibNumber" class="feedback-input" placeholder="IBAN" name="data[Iban]" />
+        <input type="text" id="swiftBic" class="feedback-input" placeholder="SWIFT, BIC" name="data[SwiftBic]" />
+        <input type="text" id="currency" class="feedback-input" placeholder="Currency" name="data[Currency]" />
+
+        <textarea class="feedback-input" placeholder="Comment" name="data[Comment]"></textarea>
+        <input type="submit" value="SUBMIT"/>
+        <input type="reset" value="RESET"/>
+      </form>
+    </div>
+
+     <!-- Logout contact form
+    ===================================-->
+    <form id="logoutForm" onsubmit="return logout()">
+      <h1 id="txtMessage"></h1>
+      <input type="submit" value="Return"/>
+    </form>
+
+
+
+
+
+
+  </body>
+</html>

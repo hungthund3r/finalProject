@@ -1,0 +1,728 @@
+/*
+  Google fonts
+================================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Press+Start+2P&display=swap');
+
+
+/*
+  Make body cover the full page
+================================*/
+html, body {
+  margin: 0px;
+  height:100%;
+}
+
+
+/*
+  Header
+================================*/
+#divNavBar {
+  width: 100%;
+  background-color: rgb(17, 27, 34);
+  color: white;
+  padding: 15px;
+  display: inline-flex;
+}
+
+#logo {
+  float: left;
+  margin-top: -5px;
+  height: 55px;
+  width: 70px;
+}
+
+#headerTitle {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+}
+
+#logoLink {
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+}
+
+
+/*
+  navbar
+================================*/
+#navUl {
+  list-style-type: none;
+}
+
+#navUl li {
+  display: inline;
+}
+
+#navUl li a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover
+================================*/
+#navUl li a:hover {
+  background-color: #111;
+}
+
+
+/*
+  Donate button
+================================*/
+.buttonWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3vw;
+}
+
+.button {
+  width: 10vw;
+  height: 4vw;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5vw;
+  letter-spacing: 1px;
+  font-weight: 700;
+  background: #4fd1c5;
+  background: linear-gradient(
+    90deg,
+    rgba(129, 230, 217, 1) 0%,
+    rgba(79, 209, 197, 1) 100%
+  );
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+}
+
+button::before {
+  content: "";
+  border-radius: 1000px;
+  width: calc(10vw + 20px);
+  height: calc(4vw + 20px);
+  border: 4px solid #00ffcb;
+  box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.button:hover,
+.button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before,
+button:focus::before {
+  opacity: 1;
+}
+
+
+/* Header
+================================================================
+================================================================*/
+#wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px; /*specify the perspective for the 3d effect*/
+}
+
+.parallax {
+  position: relative;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1; /* Make the elements go behind */
+}
+
+#p1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5vw;
+}
+
+.parallax h1, p{
+  font-size: 4vw;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* Parallax effect*/
+.background{
+  transform: translateZ(-10px) scale(2); /* Makes the background 10px away from the screen*/
+}
+
+.foreground{
+  transform: translateZ(-5px) scale(1.5);
+}
+/* Ends of parallax effect*/
+
+.background,
+.foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Use the correct aspect ratio for the imgs*/
+    z-index: -1; /*Position the imgs in the back*/
+}
+
+.no-parallax {
+  padding: 2rem;
+  height: 100vh;
+  background-color: black;
+  color: white;
+}
+
+
+/* Main content
+================================================================
+================================================================*/
+
+/* SECTION 1 */
+.p1-noParallax p{
+  float: left;
+  font-size: 2.5vw;
+  width: 50%;
+}
+
+#slide {
+  float: right;
+  width: 45%;
+  height: 24vw;
+  margin-top: 25vw;
+  background-image: url("../img/carrousel1.jpg");
+  background-size: 100% 100%;
+  box-shadow: 1px 2px 10px 5px white;
+  border-radius: 10px;
+  animation: slide 10s infinite linear;
+}
+
+@keyframes slide {
+  20%{
+    background-image: url("../img/carrousel2.jpg");
+  }
+  40%{
+    background-image: url("../img/carrousel3.jpg");
+  }
+  60%{
+    background-image: url("../img/carrousel4.jpg");
+  }
+  80%{
+    background-image: url("../img/carrousel5.jpg");
+  }
+}
+
+/* SECTION 2 */
+#firsth1 p {
+  color: white;
+}
+
+#PfloatLeft {
+  float: left;
+  width: 40%;
+  font-size: 3vw;
+  padding: 40px;
+  text-align: left;
+}
+
+#PfloatRight {
+  float:right;
+  width: 40%;
+  font-size: 3vw;
+  padding: 30px;
+  text-align: right;
+}
+
+
+/* SECTION 3 */
+#sec3no-parallax {
+  height: 100vh;
+  color: white;
+}
+
+#sec3no-parallax img{
+  width: 90%;
+  height: 26vw;
+  border-radius: 15px;
+  margin: 1.5vw;
+  box-shadow: 1px 2px 10px 5px white;
+}
+
+#p3-noParallax {
+  background: linear-gradient(to bottom, white 15%, rgb(70, 80, 179) 70%);
+  float: left;
+  height: 100vh;
+  width: 50%;
+}
+
+#p3-noParallax p{
+  font-size: 2.3vw;
+  color: black;
+}
+
+#p2-noParallax {
+  background: linear-gradient(to bottom, white 15%, rgb(73, 164, 189) 70%);
+  float: right;
+  height: 100vh;
+  width: 50%;
+}
+
+#p2-noParallax p{
+  font-size: 2.3vw;
+}
+
+.imgContainer {
+  position: relative;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.textContainer {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.imgContainer:hover .image {
+  opacity: 0.1;
+}
+
+.imgContainer:hover .textContainer {
+  opacity: 1;
+}
+
+.text {
+  color: red;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8vw;
+  font-weight: bolder;
+  width: 130%;
+}
+
+
+/* Privacy Policy
+================================================================
+================================================================*/
+.ppMainTitle {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 4vw;
+}
+
+.ppTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5vw;
+  text-align: center;
+}
+
+#ppWrapper h3{
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 1.5vw;
+}
+
+.pp1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5vw;
+  text-align: left;
+}
+
+#ppWrapper {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#ulPP {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5vw;
+}
+
+
+
+/* Game
+================================================================
+================================================================*/
+#gameTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3vw;
+  text-align: center;
+}
+
+#gameRules {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5vw;
+  text-align: center;
+}
+
+#form {
+  max-width:420px;
+  margin:50px auto;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  transition: all 0.4s;
+  padding: 13px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+
+/* Form
+================================================================
+================================================================*/
+form { max-width:420px; margin:50px auto; }
+
+#formH1 {
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+
+#txtMessage, #txtMsg{
+  text-align: center;
+}
+
+
+#logoutForm, #lgtOutForm{
+  display: none;
+}
+
+/* Input boxes */
+.feedback-input {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #CC6666;
+  transition: all 0.4s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+/* Focus effect */
+.feedback-input:focus { border:2px solid #5cf00d; }
+
+/* Text box */
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+/* Buttons */
+[type="submit"], [type ="reset"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#CC6666;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.4s;
+  margin-top:10px;
+  font-weight:700;
+}
+
+/* Hover effect */
+[type="submit"]:hover { background:#f00d0d; }
+[type="reset"]:hover { background:#f00d0d; }
+
+
+/* Contact Form
+================================================================
+================================================================*/
+#contactFormBody { background-color:white; }
+form { max-width:420px; margin:50px auto; }
+
+#contacFormH1{
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+/* Input boxes */
+.contactFeedback-input {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #CC6666;
+  transition: all 0.4s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+/* Focus effect */
+.contactFeedback-input:focus { border:2px solid blue; }
+
+/* Buttons */
+[type="contactSubmit"], [type ="contactReset"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#CC6666;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.4s;
+  margin-top:10px;
+  font-weight:700;
+}
+
+/* Hover effect */
+#contactSubmit:hover { background:#f00d0d; }
+#contactReset:hover { background:#f00d0d; }
+
+
+
+/* Bottom nav bar
+================================================================
+================================================================*/
+#bottomBarList{
+  list-style-type: none;
+  font-size: 40px;
+  display: inline-flex;;
+}
+
+#bottomBarList li a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover
+================================*/
+#bottomBarList li a:hover {
+  color: blue;
+}
+
+
+
+/* Cookies bar
+================================================================
+================================================================*/
+#cookie-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background: red;
+  color: white;
+  font-size: 1.2vw;
+  font-family: "Lato", sans-serif;
+  transition: .8s;
+  animation: slideIn .8s;
+  animation-delay: .8s;
+  .mobile {
+    display: none;
+    @media (max-width: 767px){
+      display: inline-block;
+    }
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#cookieButton {
+  color: black;
+  position: absolute;
+  display: inline-block;
+  right: 30px;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#cookieLink {
+  color: yellow;;
+}
+
+
+
+/* Bottom bar
+================================================================
+================================================================*/
+#bottomBar {
+  display:inline-block;
+  text-align:center;
+  height: 25vh;
+  width: 100%;
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+}
+
+
+/*
+  Social Media Bar
+================================*/
+.fa {
+  padding: 20px;
+  font-size: 25px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 48%;
+}
+
+.fa:hover {
+    background: black;
+    color:red;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  background:linear-gradient(45deg, #66757f, #00ACEE, #36D8FF, #f5f8fa, #ffffff);
+  color: white;
+}
+
+.fa-google {
+  background:linear-gradient(120deg, #dd4b39, #FFFFFF);
+  color: white;
+}
+
+.fa-linkedin {
+  background:linear-gradient(45deg, #0077b5, #00a0dc);
+  color: white;
+}
+
+.fa-youtube {
+  background:linear-gradient(120deg, #ff0000, #282828);
+  color: white;
+}
+
+.fa-instagram {
+  background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  color: white;
+}
+
+
+/*
+  Responsive
+================================*/
+@media only screen and (max-width:1000px) {
+  /* For tablets: */
+  .parallax, .no-parallax  {
+    height: 60%;
+  }
+
+  .background {
+    height: 170%;
+  }
+
+  #cookie-bar {
+    line-height: 50px;
+    font-size: 2vw;
+  }
+
+  #bottomBar ul{
+    align-content: center;
+  }
+
+  #sec3no-parallax {
+    height: 60%;
+  }
+
+  #bottomBarList {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  #divNavBar {
+    padding: 10px;
+  }
+
+  #logo {
+    margin-top: 1px;
+    height: 45px;
+    width: 60px;
+  }
+
+  #headerTitle {
+    margin-top: 16px;
+    margin-right: -15px;
+    font-size: 15px;
+  }
+
+  .parallax, .no-parallax {
+    height: 40%;
+  }
+
+  #sec3no-parallax {
+    height: 60%;
+    color: black;
+  }
+
+  #cookie-bar {
+    line-height: 50px;
+    font-size: 1.9vw;
+  }
+
+  #bottomBarList {
+    font-size: 30px;
+    display:grid;
+  }
+
+  #bottomBar {
+    height: 100%;
+  }
+
+  #bottomBarList li {
+    margin-top: 30px;
+  }
+
+  #bottomBar ul {
+    display:grid;
+    justify-content: center;
+  }
+
+  #bottomBar ul a {
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+}
